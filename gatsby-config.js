@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `Edmond's Blog`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `A developer blog made with GatsbyJS for my thoughts!`,
+    author: `Edmond (Jun Wen) Ma`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -16,13 +17,12 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdowns`,
+        name: `markdown-pages`,
         path: `${__dirname}/src/markdown-pages`,
       },
     },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
